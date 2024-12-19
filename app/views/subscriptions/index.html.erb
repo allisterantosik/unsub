@@ -68,7 +68,6 @@
           </div>
         </td>
         <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-          <%= image_tag "#{ subscription.name.parameterize.underscore }.png", class: "w-10 h-10 rounded-full" %>
           <div class="ps-3">
             <div class="text-base font-semibold"><%= subscription.name %></div>
             <div class="font-normal text-gray-500"><%= subscription.email %></div>
@@ -76,7 +75,7 @@
         </th>
         <td class="px-6 py-4">
           <div class="flex items-center">
-            <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> <%= subscription.status %>
+            <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> <%= subscription.status.titleize %>
           </div>
         </td>
         <td class="px-6 py-4">
