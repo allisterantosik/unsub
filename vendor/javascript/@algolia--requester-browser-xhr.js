@@ -1,0 +1,4 @@
+// @algolia/requester-browser-xhr@5.17.0 downloaded from https://ga.jspm.io/npm:@algolia/requester-browser-xhr@5.17.0/dist/requester.xhr.js
+
+function m(){function r(e){return new Promise((t=>{let o=new XMLHttpRequest;o.open(e.method,e.url,!0),Object.keys(e.headers).forEach((t=>o.setRequestHeader(t,e.headers[t])));let s,i=(e,s)=>setTimeout((()=>{o.abort(),t({status:0,content:s,isTimedOut:!0})}),e),n=i(e.connectTimeout,"Connection timeout");o.onreadystatechange=()=>{o.readyState>o.OPENED&&s===void 0&&(clearTimeout(n),s=i(e.responseTimeout,"Socket timeout"))},o.onerror=()=>{o.status===0&&(clearTimeout(n),clearTimeout(s),t({content:o.responseText||"Network request failed",status:o.status,isTimedOut:!1}))},o.onload=()=>{clearTimeout(n),clearTimeout(s),t({content:o.responseText,status:o.status,isTimedOut:!1})},o.send(e.data)}))}return{send:r}}export{m as createXhrRequester};
+
